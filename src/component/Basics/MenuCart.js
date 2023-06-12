@@ -1,7 +1,6 @@
 import React from 'react'
 
 const MenuCart = ({ menuData }) => {
-    console.log(menuData)
     return (
         <React.Fragment>
             <section className='main-card--cointainer'>
