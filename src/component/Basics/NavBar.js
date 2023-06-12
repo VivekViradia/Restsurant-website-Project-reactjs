@@ -11,11 +11,10 @@ const NavBar = ({ filterItem, menuList }) => {
                         menuList.map((curElem) => {
                             return (
 
-                                <button className='btn-group__item' onClick={() => filterItem(curElem)}>Breakfast</button>
+                                <button className='btn-group__item' onClick={() => filterItem(curElem)}>{curElem}</button>
                             )
                         })
                     }
-
                 </div>
             </nav>
         </React.Fragment>
