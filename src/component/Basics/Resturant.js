@@ -1,21 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./style.css"
+import Menu from './menuApi.js'
+import MenuCart from './MenuCart'
 
 const Resturant = () => {
+  const [menuData, setMenuData] = useState(Menu)
+
   return (
     <React.Fragment>
-      <div className='card-container'>
-        <div className='card'>
-          <div className='card-body'>
-            <span className='card-number card-circle subtitle'>1</span>
-            <span className='card-author subtle'>
-              BreakFast
-            </span>
-            <h2 className='card-title'>Maggie</h2>
-            <span className='card-description subtle'>I love Maggie realy gkojn gkgnfg gdigkdf giognwgowt wgrghiof sf f9jfadf  fsdifhsdgksg sgioj </span>
-          </div>
-        </div>
-      </div>
+      <MenuCart menuData={menuData} />
     </React.Fragment>
   )
 }
