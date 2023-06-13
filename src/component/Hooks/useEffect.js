@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./style.css"
 
-function UseState() {
+function UseEffect() {
     // const initialData = 10;
     const [num, setNum] = useState(0)
-    console.log(num)
+
+    useEffect(() => {
+        document.title = `chats(${num})`
+    })
 
     return (
         <>
@@ -16,15 +19,9 @@ function UseState() {
                     <span></span>
                     <span></span>INCR
                 </div>
-                <div className="button2" onClick={() => num > 0 ? setNum(num - 1) : setNum(0)}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>DESCR
-                </div>
             </div>
         </>
     )
 }
 
-export default UseState
+export default UseEffect
